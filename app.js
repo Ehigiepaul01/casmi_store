@@ -1,5 +1,6 @@
 const cardimages = document.querySelector(".cardImg")
 const imageContainer = document.querySelector(".col-1")
+const exploreEl = document.querySelector("#explore")
 
 const link = "https://api.pexels.com/v1/search?query=fashion";
 // const link2 = "https://api.pexels.com/v1/search?query=advert"
@@ -23,3 +24,6 @@ fetch(link, {
         }    
 })
 
+exploreEl.addEventListener("click", function() {
+    console.log("Help!!!")
+})
