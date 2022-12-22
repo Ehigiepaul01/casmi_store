@@ -11,15 +11,15 @@
     box-sizing: border-box;
 }
 
-/* body {
+body {
     margin: 0;
     padding: 0;
     color: var(--white);
     background-color: var(--brown);
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    font-family: 'Playfair Display', serif; 
-} */
+    /* font-family: 'Playfair Display', serif; */
+}
 
 .main-container {
     width: 94%;
