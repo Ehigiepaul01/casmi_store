@@ -1,9 +1,9 @@
-const cardimages = document.querySelector(".cardImg")
+const productP = document.querySelector("#product")
 const imageContainer = document.querySelector(".col-1")
-const exploreEl = document.querySelector("#explore")
+const randomPrice = Math.floor(Math.random() * 300)
 
 const link = "https://api.pexels.com/v1/search?query=fashion";
-// const link2 = "https://api.pexels.com/v1/search?query=advert"
+// const link2 = "https://api.pexels.com/v1/search?query=nature"
 
 fetch(link, {
     headers: {
@@ -13,17 +13,39 @@ fetch(link, {
 })
 .then(response => response.json())
 .then(data => {
-    console.log(data)
-    console.log(data.next_page)
+    console.log(data.photos)
+    // console.log(data.next_page)
    
     for (let i = 0; i < 15; i++) {
         let result = data.photos[i].src.tiny;
-        let imgEl = `
-        <img src=${result} alt="" class="cardImg">`
-        imageContainer.innerHTML += imgEl;
+        let designer = data.photos[i].photographer;
+        let imgEl = document.createElement("img")
+
+        imgEl.setAttribute(
+            "src",
+            `${result}`
+        );
+
+        imageContainer.appendChild(imgEl);
+
+        
+        imgEl.onclick = function handleClick() {
+            console.log(designer)
+            // location.href = `${result}`
+            // window.location.href = "product.html"
+
+          imageContainer.innerHTML = `<div>
+                <img src=${result} alt="">
+                <div>
+                <p>Store by: ${designer}
+                <p>$ ${randomPrice}</p>
+                </div>
+                <button onclick='() => console.log("Yes")'>Add to Cart</button>
+                </div>`
+        }
         }    
 })
 
-exploreEl.addEventListener("click", function() {
-    console.log("Help!!!")
-})
+    console.log(randomPrice)    
+
+

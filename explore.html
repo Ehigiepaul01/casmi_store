@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casmi Store</title>
     <link rel="stylesheet" href="Styles/index.css">
-    <link rel="stylesheet" href="Styles/shop.css">
-    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="Styles/explore.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="main-container">
@@ -27,7 +27,6 @@ cb=googleTranslateElementInit">
     </script>
     <header>
         <img src="" alt="">
-        <input type="text" placeholder="Search">
       <nav>
         <ul>
           <li><a href="">Home</a> </li>
@@ -40,12 +39,30 @@ cb=googleTranslateElementInit">
       <img src="" alt="">
     </header>
     <main>
-     <div class="container">
-        <h2></h2>
+     <div class="container explore">
+        <div class="e-content">
+        <h2 class="e-title">Find that <span>piece that gives</span> you expression.</h2>
         <p>Explore our fashion world and all your fashion needs we have to offer</p>
-        <input type="text" Search >
-        <div class="col-1">
-            <!-- three coloums -->
+    </div>
+        <div class="searchBar">
+        <!-- <label for="search">Choose your fashion item</label> -->
+        <select name="search" id="search">
+            <option value="choose and search">--Choose and search--</option>
+            <option value="Footwears">Footwears</option>
+            <option value="Jewelries">Jewelries</option>
+            <option value="Face caps">Face caps</option>
+            <option value="Clothes">Clothes</option>
+            <option value="Trousers">Trousers</option>
+            <option value="Gowns">Trousers</option>
+        </select>
+    </div>
+        <div class="e-images" id="eImg">
+            <div class="card">
+            <img src="https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1555969093-513f8aba21e8" alt="">
+            </div>
+            <img src="" alt="">
+            <img src="" alt="">
+            <img src="" alt="">
         </div>
         <div class="col-2">
 
