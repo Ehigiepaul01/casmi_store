@@ -13,13 +13,13 @@
   text-decoration: none;
 }
 
-/* body {
+body {
   margin: 0;
   padding: 0;
   background-color: var(--brown);
   font-family: "Inter", sans-serif;
   font-family: "Playfair Display", serif;
-} */
+} 
 
 .main-container {
   width: 94%;
