@@ -53,6 +53,7 @@ nav ul li a {
 
 .cart {
   margin-top: 2.5rem;
+  cursor: pointer;
 }
 
 .cart img {
@@ -87,12 +88,29 @@ nav ul li a {
   width: 20rem;
 }
 
-span {
-  color: var(--red);
+input[type="text"] {
+  border: none;
+  height: 4rem;
+  margin: 0.7rem;
+  width: 90%;
+  border-radius: 0.3rem;
 }
 
-p {
-  font-size: 1.2rem;
+#message {
+  border: none;
+  height: 8rem;
+  margin: 0.7rem;
+  width: 90%;
+  border-radius: 0.3rem;
+}
+
+label {
+  font-size: 1.3rem;
+}
+
+input::placeholder {
+  padding-left: 1rem;
+  color: var(--black);
 }
 
 button {
@@ -100,12 +118,32 @@ button {
   background-color: var(--red);
   border-radius: 2rem;
   padding: 0.6rem 2.5rem;
-  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
   text-transform: uppercase;
-  margin-top: 1.5rem;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 400;
   border: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.phone img,
+.location img,
+.email img {
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  margin: 0.5rem 2rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-left: 1rem;
 }
 
 .footer-images {
@@ -123,86 +161,3 @@ button {
 /* =============================
         Media Queries 
 ==============================*/
-@media screen and (max-width: 1440px) {
-  .slider,
-  .mobile {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .slider,
-  .mobile {
-    display: none;
-  }
-
-  .images img {
-    margin: 0.6rem;
-    height: 12rem;
-    width: 12rem;
-  }
-
-  nav ul {
-    margin-left: 0;
-  }
-
-  .cart img {
-    margin-left: 5rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  nav ul li a {
-    font-size: 0.8rem;
-  }
-
-  nav ul {
-    margin-left: 0;
-  }
-
-  nav ul li {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .cart img {
-    margin-left: 5rem;
-  }
-
-  .images {
-    margin-left: 1rem;
-  }
-
-  .images img {
-    margin: 0.4rem;
-    height: 8rem;
-    width: 8rem;
-  }
-
-  .info {
-    width: 17rem;
-    margin-right: 6rem;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  p,
-  nav ul li a,
-  .cart {
-    display: none;
-  }
-
-  h1 {
-    text-align: center;
-    justify-content: center;
-    /* font-size: 1rem; */
-  }
-}

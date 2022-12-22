@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casmi Store</title>
-    <link rel="stylesheet" href="Styles/index.css" />
+    <link rel="stylesheet" href="Styles/contact.css" />
   </head>
   <body>
     <div class="main-container">
@@ -37,17 +37,47 @@
             </div>
 
             <div class="info">
-              <h1>
-                The <br />
-                <span>place for all</span> <br />
-                your fashion needs
-              </h1>
-              <p>
-                All your fashion needs available on a budget just at the click
-                of a button
-              </p>
+              <h1>Get in touch with us</h1>
 
-              <button>Shop</button>
+              <form action="">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+
+                <label for="message">Message</label>
+                <input
+                  type="text"
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  required
+                />
+                <br />
+
+                <button>Submit</button>
+              </form>
+
+              <div class="contact">
+                <div class="phone">
+                  <img src="images/Phone.png" alt="phone" />
+                  <p>(234) xxx xxx xxxx</p>
+                </div>
+
+                <div class="location">
+                  <img src="images/location.png" alt="location" />
+                  <p>Lagos, Nigeria</p>
+                </div>
+
+                <div class="email">
+                  <img src="images/email.png" alt="email" />
+                  <p>hello@casmistore.com</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
