@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 
-/* body {
+body {
 <<<<<<< HEAD
     margin: 0;
     padding: 0;
@@ -26,8 +26,7 @@
   background-color: var(--brown);
   font-family: "Inter", sans-serif;
   font-family: "Playfair Display", serif;
->>>>>>> 2fba5c713aaec8705fc2919f091daf4c5b54173b
-} */
+} 
 
 .main-container {
   width: 94%;
