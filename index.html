@@ -6,13 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casmi Store</title>
     <link rel="stylesheet" href="Styles/index.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="main-container">
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+        {pageLanguage: 'en', includedLanguages: "en,fr,ar,es", layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+            'google_translate_element'
+        );
+        }
+        </script>
+    <script type="text/javascript" src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
       <header>
-        <img src="images/logo.png" alt="logo" />
-        <nav>
-          <ul>
+        <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+    <img src="images/icon-menu.svg" alt="" class="mobileMenu">
+        <nav class="myNav">
+      <img src="images/icon-menu-close.svg" alt="" class="closeBtn">
+          <ul class="navList">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -22,22 +37,27 @@
         </nav>
 
         <div class="cart">
-          <img src="images/cart.png" alt="cart" />
+          <a href="cart.html"><img src="images/cart.png" alt="cart" /></a>
         </div>
       </header>
-
       <main>
-        <section>
-          <div class="info-container">
-            <div class="images">
+        <section class="info-container">
+            <div class="main-images">
+              <div class="box">
               <img src="images/image 3.png" alt="images" />
+              </div>
+              <div class="box">
               <img src="images/image 2.png" alt="images" />
+              </div>
+              <div class="box">
               <img src="images/image 1.png" alt="images" />
+              </div>
+              <div class="box">
               <img src="images/image 4.png" alt="images" />
+              </div>
             </div>
-
             <div class="info">
-              <h1>
+              <h1 class="title">
                 The <br />
                 <span>place for all</span> <br />
                 your fashion needs
@@ -47,9 +67,8 @@
                 of a button
               </p>
 
-              <button>Shop</button>
+              <a href="shop.html" class="btn">Shop</a href="shop.html">
             </div>
-          </div>
         </section>
       </main>
 
@@ -59,8 +78,7 @@
           <img src="images/Vector (2).png" alt="social-icon" />
           <img src="images/Vector (3).png" alt="social-icon" />
         </div>
-
-        <div></div>
+    <div id="google_translate_element"></div>
       </footer>
     </div>
   </body>
