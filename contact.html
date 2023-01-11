@@ -5,14 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Casmi Store</title>
-    <link rel="stylesheet" href="Styles/contact.css" />
+    <link rel="stylesheet" href="Styles/index.css" />
+    <script src="index.js" defer></script>
   </head>
   <body>
     <div class="main-container">
+      <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: "en",
+              includedLanguages: "en,fr,ar,es",
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            },
+            "google_translate_element"
+          );
+        }
+      </script>
+      <script
+        type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit"
+      ></script>
       <header>
-        <img src="images/logo.png" alt="logo" />
-        <nav>
-          <ul>
+        <a href="index.html"><img src="images/logo.png" alt="logo" /></a>
+        <img src="images/icon-menu.svg" alt="" class="mobileMenu" />
+        <nav class="myNav">
+          <img src="images/icon-menu-close.svg" alt="" class="closeBtn" />
+          <ul class="navList">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact Us</a></li>
@@ -22,62 +42,44 @@
         </nav>
 
         <div class="cart">
-          <img src="images/cart.png" alt="cart" />
+          <a href="cart.html"><img src="images/cart.png" alt="cart" /></a>
         </div>
       </header>
 
       <main>
-        <section>
-          <div class="info-container">
-            <div class="images">
+        <section class="info-container">
+          <div class="main-images">
+            <div class="box">
               <img src="images/image 3.png" alt="images" />
+            </div>
+            <div class="box">
               <img src="images/image 2.png" alt="images" />
+            </div>
+            <div class="box">
               <img src="images/image 1.png" alt="images" />
+            </div>
+            <div class="box">
               <img src="images/image 4.png" alt="images" />
             </div>
+          </div>
 
-            <div class="info">
-              <h1>Get in touch with us</h1>
+          <div class="info formEl">
+            <h1 class="title">Get in <span>touch</span> with us</h1>
 
-              <form action="">
-                <label for="name">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Your Name"
-                  required
-                />
+            <div class="form">
+              <input type="text" placeholder="Your Name" />
+              <textarea name="message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+              <button class="submitBtn">Submit</button>
+            </div>
 
-                <label for="message">Message</label>
-                <input
-                  type="text"
-                  name="message"
-                  id="message"
-                  placeholder="Your Message"
-                  required
-                />
-                <br />
-
-                <button>Submit</button>
-              </form>
-
-              <div class="contact">
-                <div class="phone">
-                  <img src="images/Phone.png" alt="phone" />
-                  <p>(234) xxx xxx xxxx</p>
-                </div>
-
-                <div class="location">
-                  <img src="images/location.png" alt="location" />
-                  <p>Lagos, Nigeria</p>
-                </div>
-
-                <div class="email">
-                  <img src="images/email.png" alt="email" />
-                  <p>hello@casmistore.com</p>
-                </div>
-              </div>
+            <div class="contact">
+              <p>
+                <img src="images/phone.png" alt="phone" class="icons"/>(234) xxx xxx xxxx
+              </p>
+              <p><img src="images/location.png" alt="phone" class="icons"/>Lagos, Nigeria</p>
+              <p>
+                <img src="images/email.png" alt="email" class="icons"/>hello@casmistore.com
+              </p>
             </div>
           </div>
         </section>
@@ -89,8 +91,7 @@
           <img src="images/Vector (2).png" alt="social-icon" />
           <img src="images/Vector (3).png" alt="social-icon" />
         </div>
-
-        <div></div>
+    <div id="google_translate_element"></div>
       </footer>
     </div>
   </body>

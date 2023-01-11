@@ -33,15 +33,29 @@ select {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* display: grid;
-    grid-template-columns: repeat(6, 500px); */
 }
 
 .cardImg {
     width: 100%;
     margin-bottom: .5em;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
 }
 
 .card {
     width: 22%;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+        margin: 1em auto;
+    }
+
+    .searchBar {
+        width: 90%;
+    }
 }

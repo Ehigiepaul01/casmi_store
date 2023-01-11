@@ -1,51 +1,38 @@
-const productP = document.querySelector("#product")
-const imageContainer = document.querySelector(".col-1")
-const randomPrice = Math.floor(Math.random() * 300)
+window.addEventListener("DOMContentLoaded", fetchProducts);
+const cardimages = document.querySelector(".cardImg");
 
-const link = "https://api.pexels.com/v1/search?query=fashion";
-// const link2 = "https://api.pexels.com/v1/search?query=nature"
+const link =
+  "https://api.unsplash.com/search/photos?query=fashion&per_page=20&client_id=RCPdqXnOWsf2C1dFCQlPSmsfwMREmSW-wrETwp7i-qU";
 
-fetch(link, {
-    headers: {
-        Authorization: "563492ad6f91700001000001e5d5954abf8346b5855754a95ff3cd2d"
-    },
-    cache: "force-cache"
-})
-.then(response => response.json())
-.then(data => {
-    console.log(data.photos)
-    // console.log(data.next_page)
-   
-    for (let i = 0; i < 15; i++) {
-        let result = data.photos[i].src.tiny;
-        let designer = data.photos[i].photographer;
-        let imgEl = document.createElement("img")
+  // The function that redirects to the product page when an item is clicked on
 
-        imgEl.setAttribute(
-            "src",
-            `${result}`
-        );
+function getProduct(event) {
+  const data = JSON.parse(localStorage.getItem("Products"));
+  const id = event.currentTarget.getAttribute("data-id");
+  const product = data.find((product) => product.id === id);
+  localStorage.setItem("product", JSON.stringify(product));
+  const url = window.location.href.replace("shop.html", "product.html");
+  window.location.href = url;
+}
 
-        imageContainer.appendChild(imgEl);
+// function for making request calls to the Unsplash API
 
-        
-        imgEl.onclick = function handleClick() {
-            console.log(designer)
-            // location.href = `${result}`
-            // window.location.href = "product.html"
+function fetchProducts() {
+  fetch(link, {
+    cache: "force-cache",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      localStorage.setItem("Products", JSON.stringify(data.results));
 
-          imageContainer.innerHTML = `<div>
-                <img src=${result} alt="">
-                <div>
-                <p>Store by: ${designer}
-                <p>$ ${randomPrice}</p>
-                </div>
-                <button onclick='() => console.log("Yes")'>Add to Cart</button>
-                </div>`
-        }
-        }    
-})
+      const products = data.results.map((product) => {
+        return `<div class="card" onclick='getProduct(event)' data-id="${product.id}">
+                  <img src=${product.urls.small} alt="" class="cardImg"/>
+                </div>`;
+      });
 
-    console.log(randomPrice)    
-
-
+      const imageContainer = document.querySelector(".col-1");
+      imageContainer.innerHTML = products.join(" ");
+    });
+}
